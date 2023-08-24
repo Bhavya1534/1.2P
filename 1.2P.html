@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>JavaScript Concepts Exploration</title>
+  </head>
+  
+  <body>
+    <div id="output"></div>
+      <script>
+        const outputDiv = document.getElementById("output");
+
+      function exploreStringMethods() 
+      {
+        const text = "Greetings, Universe!";
+        outputDiv.innerHTML += "<h2>Working with Text:</h2>";
+        outputDiv.innerHTML += "Original Text: " + text + "<br>";
+        outputDiv.innerHTML += "Text Length: " + text.length + "<br>";
+        outputDiv.innerHTML += "Uppercase: " + text.toUpperCase() + "<br>";
+        outputDiv.innerHTML += "Position of 'Universe': " + text.indexOf("Universe") + "<br>";
+        outputDiv.innerHTML += "Subtext: " + text.substring(0, 9) + "<br>";
+        outputDiv.innerHTML += "Revised: " + text.replace("Universe", "Galaxy") + "<br>";
+      }
+
+      function exploreNumberMethods() 
+      {
+        const decimal = 456.789;
+        outputDiv.innerHTML += "<h2>Playing with Numbers:</h2>";
+        outputDiv.innerHTML += "Decimal Number: " + decimal + "<br>";
+        outputDiv.innerHTML += "Rounded to 2 Decimals: " + decimal.toFixed(2) + "<br>";
+        outputDiv.innerHTML += "String Representation: " + decimal.toString() + "<br>";
+        outputDiv.innerHTML += "Is an Integer: " + Number.isInteger(decimal) + "<br>";
+        outputDiv.innerHTML += "Rounded Value: " + Math.round(decimal) + "<br>";
+        outputDiv.innerHTML += "Random Value between 0 and 1: " + Math.random() + "<br>";
+      }
+
+      function manipulateArrays() 
+      {
+        const mixedData = ["apple", 123, "banana", 456, "cherry"];
+        outputDiv.innerHTML += "<h2>Manipulating Arrays:</h2>";
+        outputDiv.innerHTML += "Array Contents: " + mixedData.join(", ") + "<br>";
+        outputDiv.innerHTML += "Total Elements: " + mixedData.length + "<br>";
+      
+        mixedData.push("grape");
+        outputDiv.innerHTML += "After Adding 'grape': " + mixedData.join(", ") + "<br>";
+      
+        mixedData.pop();
+        outputDiv.innerHTML += "After Removing Last Element: " + mixedData.join(", ") + "<br>";
+      
+        mixedData.reverse();
+        outputDiv.innerHTML += "After Reversing: " + mixedData.join(", ") + "<br>";
+      }
+
+      function exploreTimeAndDate() 
+      {
+        const present = new Date();
+        outputDiv.innerHTML += "<h2>Unraveling Time:</h2>";
+        outputDiv.innerHTML += "Today's Date: " + present.toDateString() + "<br>";
+        outputDiv.innerHTML += "Current Time: " + present.toTimeString() + "<br>";
+        outputDiv.innerHTML += "Current Year: " + present.getFullYear() + "<br>";
+        outputDiv.innerHTML += "Month (0-11): " + present.getMonth() + "<br>";
+        outputDiv.innerHTML += "Day of the Month: " + present.getDate() + "<br>";
+      }
+
+      function demonstrateFunctions() 
+      {
+        function greet(name) 
+        {
+        return "Greetings, " + name + "!";
+        }
+
+        outputDiv.innerHTML += "<h2>Function Demonstrations:</h2>";
+        outputDiv.innerHTML += greet("Alice") + "<br>";
+
+        const sum = function(x, y) 
+        {
+          return x + y;
+        };
+        outputDiv.innerHTML += "Sum of 3 and 5: " + sum(3, 5) + "<br>";
+      }
+
+      exploreStringMethods();
+      exploreNumberMethods();
+      manipulateArrays();
+      exploreTimeAndDate();
+      demonstrateFunctions();
+    </script>
+  </body>
+</html>

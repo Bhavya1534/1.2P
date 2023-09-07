@@ -1,87 +1,119 @@
 <html>
-  <head>
+<head>
     <title>JavaScript Concepts Exploration</title>
-  </head>
-  
-  <body>
+</head>
+
+<body>
     <div id="output"></div>
-      <script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
         const outputDiv = document.getElementById("output");
 
-      function exploreStringMethods() 
-      {
-        const text = "Greetings, Universe!";
-        outputDiv.innerHTML += "<h2>Working with Text:</h2>";
-        outputDiv.innerHTML += "Original Text: " + text + "<br>";
-        outputDiv.innerHTML += "Text Length: " + text.length + "<br>";
-        outputDiv.innerHTML += "Uppercase: " + text.toUpperCase() + "<br>";
-        outputDiv.innerHTML += "Position of 'Universe': " + text.indexOf("Universe") + "<br>";
-        outputDiv.innerHTML += "Subtext: " + text.substring(0, 9) + "<br>";
-        outputDiv.innerHTML += "Revised: " + text.replace("Universe", "Galaxy") + "<br>";
-      }
-
-      function exploreNumberMethods() 
-      {
-        const decimal = 456.789;
-        outputDiv.innerHTML += "<h2>Playing with Numbers:</h2>";
-        outputDiv.innerHTML += "Decimal Number: " + decimal + "<br>";
-        outputDiv.innerHTML += "Rounded to 2 Decimals: " + decimal.toFixed(2) + "<br>";
-        outputDiv.innerHTML += "String Representation: " + decimal.toString() + "<br>";
-        outputDiv.innerHTML += "Is an Integer: " + Number.isInteger(decimal) + "<br>";
-        outputDiv.innerHTML += "Rounded Value: " + Math.round(decimal) + "<br>";
-        outputDiv.innerHTML += "Random Value between 0 and 1: " + Math.random() + "<br>";
-      }
-
-      function manipulateArrays() 
-      {
-        const mixedData = ["apple", 123, "banana", 456, "cherry"];
-        outputDiv.innerHTML += "<h2>Manipulating Arrays:</h2>";
-        outputDiv.innerHTML += "Array Contents: " + mixedData.join(", ") + "<br>";
-        outputDiv.innerHTML += "Total Elements: " + mixedData.length + "<br>";
-      
-        mixedData.push("grape");
-        outputDiv.innerHTML += "After Adding 'grape': " + mixedData.join(", ") + "<br>";
-      
-        mixedData.pop();
-        outputDiv.innerHTML += "After Removing Last Element: " + mixedData.join(", ") + "<br>";
-      
-        mixedData.reverse();
-        outputDiv.innerHTML += "After Reversing: " + mixedData.join(", ") + "<br>";
-      }
-
-      function exploreTimeAndDate() 
-      {
-        const present = new Date();
-        outputDiv.innerHTML += "<h2>Unraveling Time:</h2>";
-        outputDiv.innerHTML += "Today's Date: " + present.toDateString() + "<br>";
-        outputDiv.innerHTML += "Current Time: " + present.toTimeString() + "<br>";
-        outputDiv.innerHTML += "Current Year: " + present.getFullYear() + "<br>";
-        outputDiv.innerHTML += "Month (0-11): " + present.getMonth() + "<br>";
-        outputDiv.innerHTML += "Day of the Month: " + present.getDate() + "<br>";
-      }
-
-      function demonstrateFunctions() 
-      {
-        function greet(name) 
-        {
-        return "Greetings, " + name + "!";
+        // Explore string manipulation methods
+        function exploreStringMethods() {
+            const text = "Hello SIT120!";
+            outputDiv.innerHTML += "<h2>Working with Text:</h2>";
+            outputDiv.innerHTML += "Original Text: " + text + "<br>";
+            outputDiv.innerHTML += "Text Length: " + text.length + "<br>";
+            outputDiv.innerHTML += "Uppercase: " + text.toUpperCase() + "<br>";
+            outputDiv.innerHTML += "Lowercase: " + text.toLowerCase() + "<br>";
+            outputDiv.innerHTML += "Substring from 5 to 12: " + text.substring(5, 12) + "<br>";
+            outputDiv.innerHTML += "Revised: " + text.replace("Universe", "Galaxy") + "<br>";
+            outputDiv.innerHTML += "First 'e' Position: " + text.indexOf("e") + "<br>";
+            outputDiv.innerHTML += "Last 'e' Position: " + text.lastIndexOf("e") + "<br>";
+            outputDiv.innerHTML += "Split by Comma: " + text.split(",")[0] + "<br>";
         }
 
-        outputDiv.innerHTML += "<h2>Function Demonstrations:</h2>";
-        outputDiv.innerHTML += greet("Alice") + "<br>";
+        // Explore number manipulation methods
+        function exploreNumberMethods() {
+            const decimal = 12121212.121212;
+            outputDiv.innerHTML += "<h2>Playing with Numbers:</h2>";
+            outputDiv.innerHTML += "Decimal Number: " + decimal + "<br>";
+            outputDiv.innerHTML += "Rounded to 2 Decimals: " + decimal.toFixed(2) + "<br>";
+            outputDiv.innerHTML += "String Representation: " + decimal.toString() + "<br>";
+            outputDiv.innerHTML += "Is an Integer: " + Number.isInteger(decimal) + "<br>";
+            outputDiv.innerHTML += "Rounded Value: " + Math.round(decimal) + "<br>";
+            outputDiv.innerHTML += "Random Value between 0 and 1: " + Math.random() + "<br>";
+        }
 
-        const sum = function(x, y) 
-        {
-          return x + y;
-        };
-        outputDiv.innerHTML += "Sum of 3 and 5: " + sum(3, 5) + "<br>";
-      }
+        // Manipulate arrays
+        function manipulateArrays() {
+            const mixedData = ["TASK1", "TASK2", "TASK3"];
+            outputDiv.innerHTML += "<h2>Manipulating Arrays:</h2>";
+            outputDiv.innerHTML += "Array Contents: " + mixedData.join(", ") + "<br>";
+            outputDiv.innerHTML += "Total Elements: " + mixedData.length + "<br>";
 
-      exploreStringMethods();
-      exploreNumberMethods();
-      manipulateArrays();
-      exploreTimeAndDate();
-      demonstrateFunctions();
+            mixedData.push("grape"); // Add an element to the end of the array
+            outputDiv.innerHTML += "After Adding 'grape': " + mixedData.join(", ") + "<br>";
+
+            mixedData.pop(); // Remove the last element from the array
+            outputDiv.innerHTML += "After Removing Last Element: " + mixedData.join(", ") + "<br>";
+
+            mixedData.reverse(); // Reverse the order of elements in the array
+            outputDiv.innerHTML += "After Reversing: " + mixedData.join(", ") + "<br>";
+
+            // Add more array operations
+            const slicedData = mixedData.slice(1, 3); // Get a subarray from index 1 to 2
+            outputDiv.innerHTML += "Sliced Data: " + slicedData.join(", ") + "<br>";
+
+            mixedData.splice(1, 0, "kiwi", "orange"); // Insert "kiwi" and "orange" at index 1
+            outputDiv.innerHTML += "After Splicing: " + mixedData.join(", ") + "<br>";
+        }
+
+        // Explore date and time methods
+        function exploreTimeAndDate() {
+            const present = new Date();
+            outputDiv.innerHTML += "<h2>Unraveling Time:</h2>";
+            outputDiv.innerHTML += "Today's Date: " + present.toDateString() + "<br>";
+            outputDiv.innerHTML += "Current Time: " + present.toTimeString() + "<br>";
+            outputDiv.innerHTML += "Current Year: " + present.getFullYear() + "<br>";
+            outputDiv.innerHTML += "Month (0-11): " + present.getMonth() + "<br>";
+            outputDiv.innerHTML += "Day of the Month: " + present.getDate() + "<br>";
+
+            // Additional date and time methods
+            outputDiv.innerHTML += "Hours: " + present.getHours() + "<br>"; // Get hours (0-23)
+            outputDiv.innerHTML += "Minutes: " + present.getMinutes() + "<br>"; // Get minutes (0-59)
+            outputDiv.innerHTML += "Seconds: " + present.getSeconds() + "<br>"; // Get seconds (0-59)
+            outputDiv.innerHTML += "Milliseconds: " + present.getMilliseconds() + "<br>"; // Get milliseconds
+            outputDiv.innerHTML += "Day of the Week (0-6): " + present.getDay() + "<br>"; // Get day of the week (0-6)
+        }
+
+        // Demonstrate functions
+        function demonstrateFunctions() {
+            function greet(name) {
+                return "Greetings, " + name + "!";
+            }
+
+            outputDiv.innerHTML += "<h2>Function Demonstrations:</h2>";
+            outputDiv.innerHTML += greet("") + "<br>";
+
+            const sum = function (x, y) {
+                return x + y;
+            };
+            
+            outputDiv.innerHTML += "Sum of 3 and 5: " + sum(3, 5) + "<br>";
+             // Multiplication
+    const num1 = 5;
+    const num2 = 3;
+    const multiplicationResult = num1 * num2;
+    outputDiv.innerHTML += `<h2>Multiplication</h2>`;
+    outputDiv.innerHTML += `<p>${num1} * ${num2} = ${multiplicationResult}</p>`;
+
+    // Subtraction
+    const num3 = 10;
+    const num4 = 7;
+    const subtractionResult = num3 - num4;
+    outputDiv.innerHTML += `<h2>Subtraction</h2>`;
+    outputDiv.innerHTML += `<p>${num3} - ${num4} = ${subtractionResult}</p>`;
+
+          }
+
+        // Call the exploration functions
+        exploreStringMethods();
+        exploreNumberMethods();
+        manipulateArrays();
+        exploreTimeAndDate();
+        demonstrateFunctions();
     </script>
-  </body>
+</body>
 </html>
